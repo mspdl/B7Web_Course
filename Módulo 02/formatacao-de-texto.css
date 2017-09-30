@@ -1,0 +1,17 @@
+
+body {
+	margin: 0;
+}
+
+.texto {
+	width: 500px;
+	height: 700px;
+	background-color: blue;
+	color: red;
+	font-size: 40px;
+	font-family: Helvetica, Verdana, Arial, Times New Roman;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: underline;
+}

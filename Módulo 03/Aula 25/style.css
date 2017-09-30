@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+}
+.exemplo {
+	width: 150px;
+	height: 130px;
+	background-color: rgba(10, 255, 10, 0.3);
+	margin:auto;
+	margin-top: 100px;
+	box-shadow: 0px 0px 35px #999999; /* tamanho na horizontal, tamanho na vertical, blur da sombra, cor da sombra */
+	border-radius: 5px;
+	color: black;
+	text-shadow: 1px 1px 5px gray;
+	text-align: center;
+	padding-top: 20px;
+}
