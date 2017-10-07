@@ -1,0 +1,25 @@
+First we need to add new host in file:
+	C:\Windows\System32\drivers\etc\hosts
+Typing the follwing phrases in new lines inside the file:
+	127.0.0.1	projectx.pc
+	127.0.0.1	projecty.pc
+
+Now we need to create folder with the name of the hosts on the wamp www folder
+	../wamp/www/projectx.pc/index.php or index.html
+	../wamp/www/projecty.pc/index.php or index.html
+
+1 - Open the file ../wamp/bin/apache/apache.<version>/conf/httpd.conf
+2 - Locate the text "Include conf/extra/httpd-vhosts.conf"
+	remove the "#" if it does exists
+3 - Save the file
+4 - Open the file ../wamp/bin/apache/apache.<version>/conf/extra/httpd.vhosts.conf
+5 - Copy all the virtual tag content "VirtualHost *:80"
+6 - Paste creating a new tag
+7 - Inside the tag, create the lines
+	a - "ServerAdmin webmaster@sample" # sample is the name of the host/project
+		if it does exists, just change to
+	b - "DocumentRoot c:/wamp/www/sample" # it's the local of the host folder host/project
+		if it does exists, just change to
+	c - "ServerName sample" # sample is the name of the host/project
+		if it does exists, just change to
+	d - "<Directory  "c:/wamp64/www/projecty.pc/sample">" # it's the local of the host folder host/project
