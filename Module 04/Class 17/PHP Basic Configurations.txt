@@ -1,0 +1,9 @@
+PHP Configuration File:
+..\wamp64\bin\php\php7.0.10\php.ini
+
+; = comment line
+max_execution_time = time limit of php access to load a site, 120 is default
+memory_limit = limit of memory that php can use of the server
+error_reporting = E_ALL = all errors will be show (not recommended when users acess your site)
+upload_max_filesize = the max size of a file that can be uploaded by the php
+max_file_uploads = quantity of max files can be uploaded in the same time

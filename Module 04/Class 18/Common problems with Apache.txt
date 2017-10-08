@@ -1,0 +1,12 @@
+Problem: The program can't start because MSVCR100.dll is missing from your computer.
+Solution: Update/Install Visual Studio 2012 Update 4 from Microsoft Site
+
+Problem: Localhost stop to work after install another virtual server
+Solution: Create the default configuration of localhost virtual server
+
+Problem: Can save the host file
+Solution: Open the editor in administrator mode, open the file, change and save it
+
+Problem: Wamp always ornage
+Solution 1 - Skype using port 80: Check the skype and close it, after that try to open wamp again
+Solution 2 - IIS using port 80: Open cmd on administrator mode, type net stop WAS, after that try to open wamp again

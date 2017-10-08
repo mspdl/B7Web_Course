@@ -1,0 +1,3 @@
+WAMP: ../wamp/www or ../wamp64/www
+
+create files and folder inside the folder

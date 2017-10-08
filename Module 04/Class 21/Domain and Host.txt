@@ -1,0 +1,2 @@
+Domain = the adress of my server. Recommended = godaddy (cheaper)
+Host = the local where my server is hosted. Recommended = hostgator (good price, good reputation)

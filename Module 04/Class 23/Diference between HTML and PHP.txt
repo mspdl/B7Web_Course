@@ -1,0 +1,2 @@
+HTML is a front-end language, it run on the browser.
+PHP is a back-end language and run on server side, in almost every case, it process and create HTML pages.
