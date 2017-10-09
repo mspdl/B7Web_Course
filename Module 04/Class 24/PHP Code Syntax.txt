@@ -1,0 +1,9 @@
+php code are not showed in code of html pages
+$ before a name indicates that it's a variable
+variable cannot start with number, special chars (!@#$%&* etc) and cannot have spaces
+don't need to say the type of variable, like int, long or string, just follow the syntax
+	"<string>"
+	<number>
+	<function()>
+	<list[]>
+all lines needs a ";" to work

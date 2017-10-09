@@ -1,0 +1,10 @@
+// one line comment syntax
+/*
+	Multi
+	line
+	comment
+	syntax
+*/
+
+you can code and comment in the same line:
+.. code .. // comment here

@@ -1,0 +1,1 @@
+echo command is use to print informations on screen
