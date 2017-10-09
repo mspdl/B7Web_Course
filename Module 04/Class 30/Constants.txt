@@ -1,0 +1,5 @@
+it's declared with define("name","value")
+
+it's default use all constant with uppercase, example:
+
+define("URL","http://www.mysite.com")

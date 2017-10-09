@@ -1,0 +1,1 @@
+a way to solve the accent problem case is save the file with encoding Western (ISO 8859-1)

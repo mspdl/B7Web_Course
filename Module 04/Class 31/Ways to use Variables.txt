@@ -1,0 +1,4 @@
+single quote is used to represent the text exactly.
+doubles quotes are used to insert code in the middle of the text.
+
+Good tip: always use the variables outsite the text, to not confuse the in another time
