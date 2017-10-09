@@ -1,0 +1,1 @@
+global variables usually have a underline before their name declaration

@@ -1,1 +1,3 @@
 echo command is use to print informations on screen
+
+it's necessary to use a dot(.) to concatenate strings
