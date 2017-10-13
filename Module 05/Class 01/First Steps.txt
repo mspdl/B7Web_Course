@@ -1,0 +1,12 @@
+there are three way to use.
+1)
+	on broswer navegation adress
+	javascript:alert("Morgan")
+
+2)
+	on broswer console
+	F12 -> alert("Morgan")
+
+3)
+	on page code
+	class 03 you'll can see it

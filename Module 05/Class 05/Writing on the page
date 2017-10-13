@@ -1,0 +1,3 @@
+document.write("text"); // sample for insert a text on the page
+document.write("<img src='http://www.google.com/google.jpg'>"); // sample for insert a image on the page
+document.write("<strong>adding a tag</strong>"); // sample for insert a tag on the page

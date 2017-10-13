@@ -1,0 +1,16 @@
+var <variable name> = <variable value>;
+
+// = output
+
+samples:
+var name = "Morgan";
+name; // = Morgan
+name = "John";
+name; // John
+
+alert("My name is "+name); // My name is John
+var x = 10;
+x; // 10
+var y = 20;
+y; // 20
+x + y; // 30

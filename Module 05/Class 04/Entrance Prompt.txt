@@ -1,0 +1,5 @@
+var name = prompt("Whats your name?");
+var x = prompt("What's the number?")
+
+prompt makes an alert for user insert a value
+if the user cancels the alert, the result will be null
