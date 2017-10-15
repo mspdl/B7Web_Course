@@ -1,0 +1,25 @@
+creating a list
+var list ["Rice", Bean", "Pasta", "Meat", 20];
+
+search an item on the array
+list.indexOf("Bean"); // return 1, that's "Bean" list position
+list.indexOf("Something") // return -1, that's "Something isn't on the list"
+
+transform the array in a string
+list.join(","); // transforn the list into a array separate by a ","
+
+how to remove the last item of the array
+list.pop(); // return 20, this was the last item of the array
+
+how to remove the first item of the array
+list.shift(); // return "Rice", this was the first item of the array
+
+adding a new item to the list
+list.push("Test"); // return 4, the item's position of the list 
+
+making a condition with indexOf
+if(list.indexOf("Bean") > -1){
+	alert("There is in the list!");
+}else {
+	alert("There is not in the list!")
+}

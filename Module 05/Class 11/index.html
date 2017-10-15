@@ -3,15 +3,40 @@
 <head>
 	<title>Math Operations</title>
 	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<button onclick="calcSum()">Calculate the Sum</button>
-	<br>
-	<input type="number" id="sumX" name="sumX">
-	+
-	<input type="number" id="sumY" name="sumY">
-	=
-	<span id="sum">???</span>
-	<br>
+	<div>
+		<button onclick="calcSum()">Calculate the Sum</button>
+		<input type="number" id="sumX" name="sumX">
+		+
+		<input type="number" id="sumY" name="sumY">
+		=
+		<span id="sum">???</span>
+	</div>
+	<div>
+		<button onclick="calcSub()">Calculate the Substraction</button>
+		<input type="number" id="subX" name="subX">
+		-
+		<input type="number" id="subY" name="subY">
+		=
+		<span id="sub">???</span>
+	</div>
+	<div>
+		<button onclick="calcMult()">Calculate the Multiplication</button>
+		<input type="number" id="multX" name="multX">
+		*
+		<input type="number" id="multY" name="multY">
+		=
+		<span id="mult">???</span>
+	</div>
+	<div>
+		<button onclick="calcDiv()">Calculate the Division</button>
+		<input type="number" id="divX" name="divX">
+		/
+		<input type="number" id="divY" name="divY">
+		=
+		<span id="div">???</span>
+	</div>
 </body>
 </html>

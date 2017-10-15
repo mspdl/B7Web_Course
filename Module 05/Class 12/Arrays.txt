@@ -1,0 +1,11 @@
+declaring a list
+var list = ["Item 1", "Item 2", 20, true];
+
+Display the complete list
+list;
+
+Display only a specific item list[<number>]
+list[0];
+
+Display the length of the list
+list.lenght;

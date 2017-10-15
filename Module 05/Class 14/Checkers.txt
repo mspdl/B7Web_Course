@@ -1,0 +1,34 @@
+
+// with text
+var name = "Morgan";
+if(name=="Morgan") {
+	alert("This is my name.");
+}else {
+	alert("This isn't my name.")
+}
+
+// with numbers
+var x = 10;
+if(x < 5) {
+	alert("X is smaller than 5");
+} else {
+	alert("X isn't smaller than 5");
+}
+
+if(x <= 5) {
+	alert("X is smaller than 5 or equal");
+} else {
+	alert("X isn't smaller than 5 or equal");
+}
+
+if(x > 5) {
+	alert("X is bigger than 5");
+} else {
+	alert("X isn't bigger than 5");
+}
+
+if(x >= 5) {
+	alert("X is bigger than 5 or equal");
+} else {
+	alert("X isn't bigger than 5 or equal");
+}

@@ -1,0 +1,15 @@
+div {
+	background-color: #81d4fa;
+	width: 450px;
+	height: 50px;
+	padding: 5px;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+div button {
+	/*margin-left: 150px;*/
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	margin-bottom: 3px;
+}
