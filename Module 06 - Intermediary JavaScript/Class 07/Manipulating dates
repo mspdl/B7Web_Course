@@ -1,0 +1,56 @@
+main function of javascript = new Date();
+
+dates begins with milliseconds
+first date counted: 01/01/1970
+
+declaring with milliseconds
+var dt = new Date(0);
+dt = Wed Dec 31 1969 21:00:00 GMT-0300 (BRT)
+
+declaring with a date
+var dt = new Date(Date.parse("March 10, 2001"));
+dr = Sat Mar 10 2001 00:00:00 GMT-0300 (BRT)
+
+keep actual date
+var dt = new Date();
+
+show actual year
+dt.getFullYear();
+
+show actual month (0~11, 0 = january, 11 = december)
+dt.getMonth();
+
+brazilian months name
+var months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+months[dt.getMonth()];
+
+show actual week's day (0~6, 0 = sunday, 6 = saturday)
+dt.getDay();
+
+brazilian week days names
+var days = ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"];
+days[dt.getDay()];
+
+show actual month's day (1~31)
+dt.getDate();
+
+show actual hours
+dt.getHours();
+
+show actual minutes
+dt.getMinutes();
+
+show actual seconds
+dt.getSeconds();
+
+show total miliseconds from 0 to actual date
+dt.getMilliseconds();
+
+brazilian date format
+dt.getDate()+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear();
+
+adding X days to a date
+dt.setDate(dt.getDate() + X);
+
+adding X hours to a date
+dt.setHours(dt.getHours() + X);
