@@ -1,0 +1,24 @@
+------- LIKE -------
+to select the last characters:
+SELECT * FROM table WHERE colunm LIKE "%chars";
+
+to select the first characters:
+SELECT * FROM table WHERE column LIKE "chars%";
+
+to select any place characteres:
+SELECT * FROM table WHERE column LIKE "%chars%";
+
+------- BEETWEEN -------
+select the whole 2000's year
+SELECT * FROM table WHERE date_column BETWEEN "2000-01-01" AND "2000-12-31";
+
+select consective numbers
+SELECT * FROM table WHERE id BETWEEN "1" AND "10";
+
+------- IN -------
+used to select a list of itens
+with numbers
+SELECT * FROM table WHERE colunm (1, 3, 5);
+
+with text
+SELECT * FROM table WHERE colunnm ("item1", "item3");
