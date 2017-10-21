@@ -1,0 +1,33 @@
+it's qual than WHERE
+SELECT * FROM table HAVING colunm = "filter";
+
+showing another result in a select
+SELECT (colunm+(operation+number) as new_colunm FROM table;
+	sample 1:
+	SELECT (id+10) as sum FROM users;
+	result:
+		sum
+		11
+		12
+		13
+		...
+
+	sample 2:
+	SELECT *, (id+10) as sum FROM user;
+	result
+		all colunms 	sum
+		all data		11
+		all data		12
+		all data		13
+		all data		14
+
+	sample 3:
+	SELECT *, (id+10) as sum FROM user HAVING sum < 13; // cannot use WHERE in this case
+	result
+		all colunms 	sum
+		all data		11
+		all data		12
+
+HAVING is only used after a filter, because it's search in all results. It's filter after the result.
+
+WHERE filters only the results the query is asking for. It's filter during the search.
