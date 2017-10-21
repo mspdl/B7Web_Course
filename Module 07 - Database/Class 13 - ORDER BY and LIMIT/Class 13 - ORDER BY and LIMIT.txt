@@ -1,2 +1,14 @@
 ----- ORDER BY -----
 order a list how you demand
+SELECT * FROM table ORDER BY colunm ASC/DESC(ASC is default);
+samples:
+	SELECT * FROM users ORDER BY birth_date;
+	SELECT name, birth_date FROM users WHERE age < 30 ORDER BY birth_date DESC;
+	SELECT name FROM users ORDER BY name DESC;
+
+----- LIMIT -----
+determine the max values of results
+SELECT * FROM table LIMIT X;
+samples:
+	SELECT * FROM users LIMIT 10; // show only max 10 results
+	SELECT * FROM users LIMIT 1,5; // jump from result 1 (begin in 0) and show max 5 results

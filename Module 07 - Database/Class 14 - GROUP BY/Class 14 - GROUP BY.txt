@@ -1,0 +1,20 @@
+used to accounting matters
+
+It's similar to this:
+SELECT COUNT(*) as count FROM users WHERE salary_range = "1"; // result: 2
+
+in this case, the database uses two consults, the GROUP BY is only one consult, it's best for the performance of the server
+
+SELECT COUNT(*) as count, salary_range FROM users GROUP BY salary_range; //result:
+	count 	salary_range
+	5		1
+	3		2
+	1		3
+	
+when you use only the GROUP BY, the result is only the first values of each result GROUP. 
+sample:
+	SELECT * FROM users GROUP BY salary_range;
+	id	salary_range	name	email	password	birth_date
+	2	1				John	j@j.com	23794s		2017-01-01
+	15	2				Marie	m@m.com	87asd8s		2015-11-25
+	6	3				Lucas	l@l.com	sad890f		2000-07-12
