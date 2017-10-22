@@ -1,0 +1,4 @@
+subqueries are NOT good to server process, for it made a query inside other query, that is, many queries in one time. samples:
+	SELECT users.name,(select salary_ranges.title from salary_ranges where salary_ranges.id = users.salary_range) as salary_range FROM users;
+
+	SELECT users.name FROM users WHERE (select salary_ranges.title from salary_ranges where salary_ranges.id = users.salary_range) = "0 - 1000";
