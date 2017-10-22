@@ -1,0 +1,12 @@
+----- INNER JOIN ----- 
+INNER only show results on JOIN sucessful combinations, if a salary_range.id does not exists on users.salary_range, it won't be showed, and vice-versa. sample:
+	SELECT users.name,salary_ranges.title FROM users INNER JOIN salary_ranges ON salary_ranges.id = users.salary_range;
+
+----- LEFT JOIN ----- 
+LEFT show all results from users(left table), but if a salary_range.id does not exists on users.salary_range, it will be showed IN LEFT anyway, but with "NULL".sample:
+	SELECT users.name,salary_ranges.title FROM users LEFT JOIN salary_ranges ON salary_ranges.id = users.salary_range;
+
+
+----- RIGHT JOIN ----- (hardly used) 
+RIGHT show all results from salary_ranges (right table), but if a users.salary_range does not exists on salary_range.id, it will be showed IN RIGHT anyway, but with "NULL".sample:
+	SELECT users.name,salary_ranges.title FROM users RIGHT JOIN salary_ranges ON salary_ranges.id = users.salary_range;
