@@ -1,0 +1,8 @@
+1:N (one-to-many)
+sample: a category can have many products (1:N), a product have only one category (N:1) 
+
+1:1 (one-to-one)
+sample: system with token login
+
+N:N (many-to-many)
+sample: a products can have many colors (N:N), a color can have many products (N:N)
