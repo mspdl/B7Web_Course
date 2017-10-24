@@ -1,0 +1,30 @@
+1 - export database from our server:
+	select the database
+	go to export
+		Export method: FAST
+		Format: SQL
+	execute - it'll download a file
+
+2 - create a database on hosting server
+	go to hosting server painel
+	select MySQL database
+	insert a nme in the "New database" field
+	click in create
+	--- optional:
+	back in MySQL database
+	down to users and create a new one
+	--- not optional:
+	back in MySQL database
+	down to users and find "Add user to the database" or something like that
+	click in "Add"
+
+
+3 - import data to hosting server database
+	go to hosting server painel
+	select phpMyAdmin
+	select the database
+	select import
+	click in "choose file"
+	select the exported file, and Go
+	--- optional, if this error appears: "#1227 - Access denied; you need (at least one of) the SUPER privilege(s) for this operation hostgator"
+		go to the imported file and remove the parameter "DEFINER = root@localhost" of your functions
