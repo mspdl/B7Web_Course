@@ -1,0 +1,8 @@
+A View is a fake table, a virtual table;
+
+CREATE VIEW viewname as
+	SELECT colunm(s) FROM table + filters;
+
+sample:
+CREATE VIEW firstsalaryrange as
+	SELECT * FROM users WHERE salary_range='1';
