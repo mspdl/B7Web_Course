@@ -1,0 +1,28 @@
+DELIMITER is used to change how the command syntax ends, default is ";"
+
+Functions names are declared of the follow way:
+	CREATE FUNCTION NAME (parameters type_parameter) // function name is majuscule, parameters if need
+	RETURNS type_parameter // if needed
+	BEGIN
+		...
+		function content
+		...
+	END
+	execute on database
+
+	sample:
+		DELIMITER $$
+		CREATE FUNCTION COUNTCHAR (name VARCHAR(100))
+			RETURNS INT(10)
+		   	BEGIN
+		   
+			    DECLARE qtd INT(10);
+			    SET qtd = LENGTH(name);
+			    RETURN qtd;
+		   
+		   END$$
+
+To run a function, you'll use it on another query:
+	SELECT coluns FUNCTION(parameters) as funcion_colunm_name FROM table;
+	sample:
+		SELECT name,email, COUNTCHAR(name) as charlenght FROM users;
