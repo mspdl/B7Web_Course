@@ -1,0 +1,10 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css");
+
+body,html {
+	padding: 10px;
+}
+
+h3 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
