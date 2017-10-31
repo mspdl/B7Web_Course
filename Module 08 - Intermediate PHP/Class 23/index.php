@@ -6,9 +6,6 @@
 		<title>Class 23 - Sample: Posts Control</title>
 		<link rel="stylesheet" type="text/css" href="../style.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<style type="text/css">
-			
-		</style>
 	</head>
 	<body>
 		<a href="add.php" class="btn btn-primary">Add new Post</a>
