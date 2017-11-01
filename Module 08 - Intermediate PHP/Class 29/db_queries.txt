@@ -1,0 +1,10 @@
+CREATE DATABASE project_comment;
+
+CREATE TABLE `messages` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `msg_date` datetime NOT NULL,
+ `name` varchar(50) NOT NULL,
+ `msg` text NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1
+

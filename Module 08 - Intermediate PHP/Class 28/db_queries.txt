@@ -1,0 +1,10 @@
+CREATE DATABASE project_ordination;
+
+CREATE TABLE `users` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(100) NOT NULL,
+ `age` int(3) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `users` (`id`, `name`, `age`) VALUES (NULL, 'Morgan', '27'), (NULL, 'John', '19'), (NULL, 'Lucas', '33'), (NULL, 'Pablo', '7'), (NULL, 'Maicon', '87'), (NULL, 'Maria', '22'), (NULL, 'Ana', '25'), (NULL, 'Kath', '67'), (NULL, 'Barb', '90'), (NULL, 'Breno', '77'), (NULL, 'Natan', '99');
