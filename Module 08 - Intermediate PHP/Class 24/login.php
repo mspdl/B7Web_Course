@@ -53,4 +53,4 @@ if (isset($_POST['email']) && empty($_POST['email']) == false &&
 		</form>
 		
 	</body>
-</html>
+</html> 

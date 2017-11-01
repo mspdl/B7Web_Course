@@ -5,4 +5,4 @@ CREATE TABLE `users` (
  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `users` (`id`, `email`, `password`) VALUES (NULL, 'm.spdl@live.com', MD5('teste'));
+INSERT INTO `users` (`id`, `email`, `password`) VALUES (NULL, 'm.spdl@live.com', MD5('teste')); 

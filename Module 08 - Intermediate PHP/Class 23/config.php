@@ -8,4 +8,4 @@ try {
 	$pdo = new PDO($dsn, $dbuser, $dbpass);
 } catch(PDOException $e) {
 	echo "Connection Failed: ".$e->getMessage();
-}
+} 
