@@ -11,4 +11,4 @@
 			<br>
 			rand() // Parse error: generally when you forget the; usually the error message informes the line after the ; was forgotten
 	</body>
-</html>
+</html> 
