@@ -60,4 +60,4 @@ if (isset($_POST['email']) && !empty($_POST['email']) &&
 		header('Location: ' . $_SERVER['HTTP_REFERER']);
 	}
 	
-}
+} 

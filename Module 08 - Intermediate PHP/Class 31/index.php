@@ -28,4 +28,4 @@
 		<p>User: <?php echo $email; ?> - <a href="logout.php">Logout</a></p>
 		<p><a href="http://localhost/B7Web_Course/Module%2008%20-%20Intermediate%20PHP/Class%2031/register.php?code=<?php echo $code; ?>">Link for New Invitations</p></a>
 	</body>
-</html>
+</html> 

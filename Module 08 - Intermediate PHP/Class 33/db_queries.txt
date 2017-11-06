@@ -1,0 +1,22 @@
+CREATE DATABASE project_cashmachine;
+
+CREATE TABLE `accounts` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `owner` varchar(100) NOT NULL DEFAULT '0',
+ `agency` int(11) NOT NULL DEFAULT '0',
+ `account` int(11) NOT NULL DEFAULT '0',
+ `password` varchar(32) NOT NULL DEFAULT '0',
+ `balance` float NOT NULL DEFAULT '0',
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+CREATE TABLE `historical` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `id_account` int(11) NOT NULL DEFAULT '0',
+ `type` tinyint(1) NOT NULL DEFAULT '0',
+ `value` float NOT NULL DEFAULT '0',
+ `operation_date` datetime DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+INSERT INTO accounts (owner, agency, account, password, balance) VALUES ("Morgan",123,321,md5("teste"),0);

@@ -15,4 +15,4 @@ UPDATE users SET code=md5('34asd5da2dsad3f54') where ID=1;
 UPDATE users SET code=md5('sad7a8980vx09c8sd') where ID=2;
 
 ALTER TABLE users ADD code_count tinyint(1) NOT NULL;
-UPDATE users SET code_count=1;
+UPDATE users SET code_count=1; 

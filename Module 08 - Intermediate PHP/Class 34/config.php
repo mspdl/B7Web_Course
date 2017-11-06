@@ -1,6 +1,6 @@
 <?php
 
-$dbname = "mysql:dbname=project_registerbyinvite;host=localhost";
+$dbname = "mysql:dbname=project_cashmachine;host=localhost";
 $dbuser = "root";
 $dbpass = "root123";
 
@@ -10,4 +10,4 @@ try {
 } catch (PDOException $e) {
 	echo "Failure: ".$e->getMessage();
 	exit;
-} 
+}
