@@ -39,17 +39,25 @@ if (isset($_POST['email']) && !empty($_POST['email']) &&
 
 	if($sql->rowCount() <= 0) {
 
+		// getting and (maybe) changing the code from invite code
+		$cc_code = addslashes($_GET['code']); // get the code
+		$sql = $pdo->query("SELECT * FROM users WHERE code = '$code'"); // select all users with the code
+		$data = $sql->fetch(); // filling a variable with the query result
+		$cc_code_count = $data['code_count']; // filling a variable with the code counter of the getted code
+		$sql = query("UPDATE users SET code_count = '$cc_code_count' + 1 WHERE code = '$cc_code'"); // now plus 1 on code count of the selected user who inveted
+
+		// creating new user
 		$code = md5(rand(0,9999).rand(0,9999));
-		$sql = "INSERT INTO users (email, password, code) VALUES ('$email', '$password', '$code')";
+		$sql = "INSERT INTO users (email, password, code, code_count) VALUES ('$email', '$password', '$code', '1')";
 
 		$sql = $pdo->query($sql);
 
-		/*
 		unset($_SESSION['logged']);
 
 		header("Location: login.php");
 		exit;
-		*/
+	} else {
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 	}
 	
 }

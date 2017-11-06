@@ -3,15 +3,21 @@
 	session_start();
 	require'config.php';
 
-	if(!empty($_GET['code'])) {
+	if(isset($_GET['code']) && !empty($_GET['code'])) {
 		$code = addslashes($_GET['code']);
 
-		$sql = "SELECT * FROM users WHERE code = '$code'";
+		$sql = "SELECT code_count FROM users WHERE code = '$code'";
 		$sql = $pdo->query($sql);
 
-		if($sql->rowCount() <= 0 ) {
+		if($sql->rowCount() <= 0) {
 			header("Location: login.php");
 			exit;
+		} else {
+			$data = $sql->fetch();
+			if ($data['code_count'] > 5) {
+				header("Location: login.php");
+				exit;
+			}
 		}
 	} else {
 		header("Location: login.php");
@@ -35,7 +41,7 @@
 			Password:<br>
 			<input type="password" name="password"><br><br>
 
-			<input type='hidden' name='action' value='register'>
+			<input type='hidden' name='action' value='register?code='<?php echo $code?>>
 			<input type="submit" value="Register">
 		</form>
 	</body>
