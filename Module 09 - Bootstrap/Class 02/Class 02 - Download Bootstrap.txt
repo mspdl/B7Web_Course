@@ -1,0 +1,13 @@
+http://getbootstrap.com/ -> Download Bootstrap
+
+### LOCAL FILES - Don't update automatically, but keep it on the server, don't be needed a connection to bootstrap page
+Download the zip file, extract to a local folder and set your html page to the extracted file (css/bootstrap.min.css and js/bootstrap.min.js)
+
+OR
+
+### LINK TO BOOTSTRAP PAGE - Update automatically, mas needs to have connection with the bootstrap page
+Add 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+
+into your page
