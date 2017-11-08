@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Class 06 - Text Style</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- responsibility for mobile devices -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> <!-- recommended load it first -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- Jquery NEEDS to be FIRST -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> <!-- bootstrap js needs the jquery js -->
+	</head>
+	<body>
+		<div class="container"> <!-- there is another bootstrap class for container, called container-fluid, the difference is: container-fluid doesn't a fixed width, that is, the container-fluid uses the max width of the page -->
+			<h1>My first <small>Bootstrap system</small></h1>
+			<p>This is my first test.</p>
+
+			<hr>
+			<p>
+				This is a <mark>test phrase</mark> specific for <abbr title="A very nice framework.">Bootstrap</abbr>.
+			</p>
+			<hr>
+			<blockquote class="blockquote blockquote-reverse">
+				<p class="mb-0">This is a very famous quotation of a very famous actor.</p>
+				<footer class="blockquote-footer">
+					<cite>Morgan Freeman</cite>
+				</footer>
+			</blockquote>
+			<hr>
+			<dl>
+				<dt>Coffee</dt>
+				<dd>- Hot black drink</dd>
+
+				<dt>Milk</dt>
+				<dd>- Cold white drink</dd>
+			</dl>
+			<hr>
+			<p>To make a quote in bootstrap, use <code>the code tag</code></p>
+			<hr>
+			<p>Another way to make quote in bootstrap is using <kbd>the kbd tag</kbd></p>
+			<hr>
+			<pre>
+				Pre tag
+				define the text
+				just the way
+				you like
+			</pre>
+			<hr>
+			<p class="text-center">to set the text in center, use the class text-center</p>
+			<hr>
+			<p class="text-uppercase">to set the text uppercase, use the class text-uppercase</p>
+
+			<hr>
+			<p class="text-danger">This phrase represents some danger (class=text-danger)</p>
+			<hr>
+			<p class="bg-danger">This phrase represents some danger (class=bg-danger)</p>
+			<hr>
+			<p class="text-warning">This phrase represents some warning (class=text-warning)</p>
+			<hr>
+			<p class="bg-warning">This phrase represents some warning (class=bg-warning)</p>
+			<hr>
+			<p class="text-success">This phrase represents some success (class=text-sucess)</p>
+			<hr>
+			<p class="bg-success">This phrase represents some sucesss (class=bg-sucesss)</p>
+			<hr>
+			<p class="text-info">This phrase represents some info (class=text-info)</p>
+			<hr>
+			<p class="bg-info">This phrase represents some info (class=bg-info)</p>
+		</div>
+	</body>
+</html>

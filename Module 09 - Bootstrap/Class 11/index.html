@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Class 11 - Dropdown Buttons</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- responsibility for mobile devices -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> <!-- recommended load it first -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- Jquery NEEDS to be FIRST -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> <!-- bootstrap js needs the jquery js -->
+	</head>
+	<body>
+		<div class="container"> <!-- there is another bootstrap class for container, called container-fluid, the difference is: container-fluid doesn't a fixed width, that is, the container-fluid uses the max width of the page -->
+			<h1>My first <small>Bootstrap system</small></h1>
+			<p>This is my first test.</p>
+			<hr>
+
+			<div class="dropdown">
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Choose <span class="caret"></span></button>
+				<ul class="dropdown-menu">
+					<li><a href="#">PHP</a></li>
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">CSS</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</body>
+</html>
