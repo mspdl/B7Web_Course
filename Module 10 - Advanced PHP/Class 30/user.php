@@ -1,6 +1,6 @@
 <?php 
 
-class user {
+class User {
 
 	private $id;
 	private $email;
@@ -11,12 +11,12 @@ class user {
 
 	// Constructor
 	public function __construct($i) {
-		if(!empty($i)) {
-			try {
-				$this->pdo = new PDO("mysql:dbname=users;host:localhost","root","root123");
-			} catch (PDOException $e) {
-				echo "FAILURE: ".$e->getMessage();
-			}
+		try {
+			$this->pdo = new PDO("mysql:dbname=users;host:localhost","root","root123");
+		} catch (PDOException $e) {
+			echo "FAILURE: ".$e->getMessage();
+		}
+		if(!empty($i)) {	
 			$sql = "SELECT * FROM users WHERE id = ?";
 			$sql = $this->pdo->prepare($sql);
 			$sql->execute(array($i));
@@ -52,7 +52,7 @@ class user {
 
 	public function save() {
 		if(!empty($this->id)) {
-			$sql = "UPDATE users SET email = '?', password = '?', name = '?' WHERE id = ?";
+			$sql = "UPDATE users SET email = ?, password = ?, name = ? WHERE id = ?";
 			$sql = $this->pdo->prepare()$sql;
 			$sql->execute(array($this->email, $this->password, $this->name, $this->id))
 		}else {
