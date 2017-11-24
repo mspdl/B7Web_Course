@@ -6,7 +6,7 @@ require 'classes/users.class.php';
 if (!empty($_POST['email'])) {
 	$email = addslashes($_POST['email']);
 	$password = md5($_POST['password']);
-
+	
 	$user = new User($pdo);
 
 	if($user->login($email, $password)) {
@@ -16,17 +16,16 @@ if (!empty($_POST['email'])) {
 		echo "User and/or password are wrong.";
 	}
 }
-
-include 'header.html';
 ?>
-<h1>Login</h1>
-<form method="POST">
-	E-mail:<br>
-	<input type="email" name="email"><br><br>
-	
-	Password:<br>
-	<input type="password" name="password"><br><br>
+<?php include 'header.html'; ?>
+		<h1>Login</h1>
+		<form method="POST">
+			E-mail:<br>
+			<input type="email" name="email"><br><br>
+			
+			Password:<br>
+			<input type="password" name="password"><br><br>
 
-	<input type="submit" value="login">
-</form>
-<?php include 'footer.html' ?>
+			<input type="submit" value="login">
+		</form>
+<?php include 'footer.html'; ?>

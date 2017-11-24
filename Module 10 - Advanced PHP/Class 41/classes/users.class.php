@@ -32,7 +32,19 @@ class User {
 		if($sql->rowCount() > 0) {
 			$sql = $sql->fetch();
 
-			$this->permissions = explode(", ", $sql['permissions']);
+			$this->permissions = explode(",", $sql['permissions']);
+		}
+	}
+
+	public function getPermissions() {
+		return $this->permissions;
+	}
+
+	public function hasPermission($p) {
+		if(in_array($p, $this->permissions)) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 }
