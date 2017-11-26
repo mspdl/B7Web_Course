@@ -31,4 +31,7 @@ INSERT INTO `cars`(`name`) VALUES
 
 
 /* #########	3 - filling cars' table 	#########*/
-INSERT INTO `booking` (`id`, `id_car`, `start_date`, `end_date`, `person`) VALUES (NULL, '2', '2017-01-05', '2017-01-10', 'Morgan');
+INSERT INTO `booking` (`id`, `id_car`, `start_date`, `end_date`, `person`) VALUES 
+	(NULL, '2', '2017-01-05', '2017-01-10', 'Morgan'),
+	(NULL, '5', '2017-01-07', '2017-01-08', 'Paulo'),
+    (NULL, '1', '2017-02-02', '2017-02-10', 'John');
