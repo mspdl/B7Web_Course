@@ -1,0 +1,37 @@
+/* #########	1 - creating database 	#########*/
+CREATE DATABASE `project_bookingsystem` /*!40100 DEFAULT CHARACTER SET utf8mb4 */
+
+
+/* ######### 	2 - creating table cars 	#########*/
+CREATE TABLE `cars` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(100) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4
+
+
+/* ######### 	2 - creating table booking 	#########*/
+CREATE TABLE `booking` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `id_car` int(11) DEFAULT NULL,
+ `start_date` date DEFAULT NULL,
+ `end_date` date DEFAULT NULL,
+ `person` varchar(100) DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4
+
+
+/* #########	3 - filling cars' table 	#########*/
+INSERT INTO `cars`(`name`) VALUES 
+	('Palio'),
+    ('Voyage'),
+    ('Corolla'),
+    ('Hilux'),
+    ('Camaro');
+
+
+/* #########	3 - filling cars' table 	#########*/
+INSERT INTO `booking` (`id`, `id_car`, `start_date`, `end_date`, `person`) VALUES 
+	(NULL, '2', '2017-01-05', '2017-01-10', 'Morgan'),
+	(NULL, '5', '2017-01-07', '2017-01-08', 'Paulo'),
+    (NULL, '1', '2017-02-02', '2017-02-10', 'John');
