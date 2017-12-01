@@ -20,3 +20,6 @@ CREATE TABLE `historical` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 
 INSERT INTO accounts (owner, agency, account, password, balance) VALUES ("Morgan",123,321,md5("teste"),0);
+
+INSERT INTO historical (id_account, type, value, operation_date) VALUES (1,0,'100.23','2017-12-12 00:00:00');
+INSERT INTO historical (id_account, type, value, operation_date) VALUES (1,1,'50','2017-12-13 00:00:00');
