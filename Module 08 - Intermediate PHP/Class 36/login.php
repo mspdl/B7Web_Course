@@ -31,7 +31,7 @@ if (isset($_POST['agency']) && !empty($_POST['agency']) &&
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Class 34 - Project: Cash machine online</title>
+	<title>Class 33 - Project: Cash machine online</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
