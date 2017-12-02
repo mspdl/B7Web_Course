@@ -2,12 +2,13 @@
 session_start();
 require 'config.php';
 require 'classes/user.class.php';
-$user = new User($pdo);
 
-if (isset($_POST['email']) && !empty($_POST['email'])) {
+
+if (!empty($_POST['email'])) {
 	$email = addslashes($_POST['email']);
 	$password = md5($_POST['password']);
 
+	$user = new User($pdo);
 	$user->toLogin($email, $password);
 }
 

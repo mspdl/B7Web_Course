@@ -9,23 +9,32 @@ class User {
 	}
 
 	public function toLogin($email, $password) {
-		echo $email;
-		echo $password;
-		$sql = "SELECT * FROM users WHERE email = :email AND password = :password";
-		$sql = $this->pdo->prepare($sql);
-		$sql->bindValue(':email', $email);
-		$sql->bindValue(':password', $password);
+		$sql = $this->pdo->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
+		$sql->bindValue(":email", $email);
+		$sql->bindValue(":password", $password);
 		$sql->execute();
-		echo $sql->rowCount();
-		if($sql->rowCount() > 0 ) {
-			$sql->fetch();
+
+		if($sql->rowCount() > 0) {
+			$sql = $sql->fetch();
+
 			$_SESSION['login'] = $sql['id'];
-			echo "ok";
+
+			header("Location: index.php");
+			exit;
 		} else {
-			echo "Ivanlid email or password";
+			echo "Invalid user and/or password.";
 		}
 	}
-} 
 
+	public function getUserName($id){
+		$sql = $this->pdo->prepare("SELECT name FROM users WHERE id = ?");
+		$sql->execute(array($id));
+		$userInfos = array();
+		if ($sql->rowCount() > 0) {
+			$userInfos = $sql->fetch();
+		}
+		return $userInfos;
+	}
+} 
 
 ?>
