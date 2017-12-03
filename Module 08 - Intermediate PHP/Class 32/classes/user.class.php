@@ -35,6 +35,32 @@ class User {
 		}
 		return $userInfos;
 	}
+
+	public function addUser($name, $email, $id_father) {
+		$sql = $this->pdo->prepare("SELECT * FROM users WHERE email = ?");
+		$sql->execute(array($email));
+		if ($sql->rowCount() > 0) {
+			echo "E-mail already registered.";
+		} else {
+			$sql = $this->pdo->prepare("INSERT INTO users (id_father, name, email, password) VALUES (?, ?, ?, ?)");
+			if($sql->execute(array($id_father, $name, $email, md5($email)))) {
+				header("Location: index.php");
+				exit;
+			} else {
+				echo "Something is wrong and/or missing.";
+			}
+		}
+	}
+
+	public function listChildren($id_father) {
+		$array = array();
+		$sql = $this->pdo->prepare("SELECT name FROM users WHERE id_father = ?");
+		$sql->execute(array($id_father));
+		if ($sql->rowCount() > 0) {
+			$array = $sql->fetchAll();
+		}
+		return $array;
+	}
 } 
 
 ?>
