@@ -26,8 +26,12 @@ class User {
 		}
 	}
 
-	public function getUserName($id){
-		$sql = $this->pdo->prepare("SELECT name FROM users WHERE id = ?");
+	public function getUserInfos($id){
+		$sql = $this->pdo->prepare("
+			SELECT u.name, p.name as p_name
+			FROM users as u 
+			LEFT JOIN positions as p ON p.id = u.position
+			WHERE u.id = ?");
 		$sql->execute(array($id));
 		$userInfos = array();
 		if ($sql->rowCount() > 0) {
@@ -54,7 +58,11 @@ class User {
 
 	public function listGuests($id_father, $limit) {
 		$array = array();
-		$sql = $this->pdo->prepare("SELECT * FROM users WHERE id_father = ?");
+		$sql = $this->pdo->prepare("SELECT
+			u.id, u.id_father, u.position, u.name, p.name as p_name 
+			FROM users as u 
+			LEFT JOIN positions as p ON p.id = u.position
+			WHERE u.id_father = ?");
 		$sql->execute(array($id_father));
 
 		if ($sql->rowCount() > 0) {
@@ -79,13 +87,30 @@ class User {
 			} else {
 				$guest = 'guests';
 			}
-			echo $user['name'].' ('.count($user['guests']).' '.$guest.')';
+			echo $user['name'].' ('.$user['p_name'].') - ('.count($user['guests']).' direct '.$guest.')';
 			if (count($user['guests']) > 0) {
 				$this->showGuests($user['guests']);
 			}
 			echo "</li>";
 		}
 		echo "</ul>";
+	}
+
+	public function updateUsers($id_father, $limit) {
+		$array = array();
+		$guests = 0;
+		$sql = $this->pdo->prepare("SELECT * FROM users WHERE id_father = ?");
+		$sql->execute(array($id_father));
+		if ($sql->rowCount() > 0) {
+			$array = $sql->fetchAll(PDO::FETCH_ASSOC);
+			$guests = $sql->rowCount();
+			foreach ($array as $key => $user) {
+				if ($limit > 0) {
+					$guests += $this->updateUsers($user['id'], $limit-1);
+				}
+			}
+		}
+		return $guests;
 	}
 } 
 

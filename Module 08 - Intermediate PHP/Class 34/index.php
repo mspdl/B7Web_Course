@@ -14,8 +14,8 @@ if (empty($_SESSION['login'])) {
 
 
 <?php include 'header.html' ?>
-	<?php $userName = $user->getUserName($_SESSION['login']); ?>
-	<h2>Hello, <?php echo $userName['name']; ?></h2>
+	<?php $userInfos = $user->getUserInfos($_SESSION['login']); ?>
+	<h2>Hello, <?php echo $userInfos['name'].'! You are '.$userInfos['p_name'].'.'; ?></h2>
 	<a href="register.php">Add new user</a>
 	<hr>
 	<h3>Your guests</h3>
