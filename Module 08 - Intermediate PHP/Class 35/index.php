@@ -25,7 +25,7 @@ if (isset($_SESSION['bank']) && !empty($_SESSION['bank'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Class 34 - Project: Cash machine online</title>
+	<title>Class 35 - Project: Cash machine online (1/2)</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
