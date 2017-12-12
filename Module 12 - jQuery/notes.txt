@@ -1,0 +1,10 @@
+jQuery has three versions to download:
+1 - compressed: this version is recomended to use on the site, for it's smaller than the others. This version is difficult to interpret, therefore, is hard to learn
+2 - uncompressed: this version is recomended to learn, for it's code is organized, being easy to learn.
+3 - map file: only for who wants to develops with jQuery
+
+jquery import is recommendo to put in body tag, not the head tag
+
+to know which frameworks are installed on the page, use the frameworks extesion for google chrome: https://chrome.google.com/webstore/detail/frameworks/jgghnecdoiloelcogfmgjgcacadpaejf
+
+recommendo to import your personal js after the jquery scripts
