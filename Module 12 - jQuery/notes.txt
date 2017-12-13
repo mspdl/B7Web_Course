@@ -7,4 +7,7 @@ jquery import is recommendo to put in body tag, not the head tag
 
 to know which frameworks are installed on the page, use the frameworks extesion for google chrome: https://chrome.google.com/webstore/detail/frameworks/jgghnecdoiloelcogfmgjgcacadpaejf
 
-recommendo to import your personal js after the jquery scripts
+recommended to import your personal js after the jquery scripts
+
+$.action = is an action from the jQuery itself
+$(element).action = is an action in a specific element, can be of the jquery or not
