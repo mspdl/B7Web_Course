@@ -11,3 +11,10 @@ recommended to import your personal js after the jquery scripts
 
 $.action = is an action from the jQuery itself
 $(element).action = is an action in a specific element, can be of the jquery or not
+
+$(document).ready(function(){}); // load the function() after load the site (document)
+$(function(){}); // the same as the line above
+
+// the same as the lines above:
+$function allReady(){}
+$(document).ready(allReady);
