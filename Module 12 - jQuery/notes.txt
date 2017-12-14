@@ -18,3 +18,8 @@ $(function(){}); // the same as the line above
 // the same as the lines above:
 $function allReady(){}
 $(document).ready(allReady);
+
+to avoid conflits is recommended to create a variable attributing the function jQuery.noConflict(); there is a sample in class 05
+
+another way to avoid conflict is using the jQuery directly, like this:
+jQuery(document).ready(function() {}); // the $ is changed to jQuery on call a function
