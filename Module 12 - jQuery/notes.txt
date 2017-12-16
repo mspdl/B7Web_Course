@@ -31,3 +31,18 @@ $('tag').attr('attribute','value');
 
 to get the attribute:
 $('tag').attr('attribute');
+
+to change all content of a div or other tag with many tags inside it, use the property html:
+$('tag').html('new text sample');
+
+to show all content of a div or other tag with many tags inside it, use the property html empty:
+$('tag').html();
+
+to select an unique element of a tag with many tags inside it:
+$('tag').find('tag_inside_tag');
+
+to add a class in a element
+$('tag').addClass('className');
+
+to change a content of a tag inside a tag with many tags:
+$('tag').find('tag_inside_tag').html('new content')
