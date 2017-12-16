@@ -25,3 +25,9 @@ another way to avoid conflict is using the jQuery directly, like this:
 jQuery(document).ready(function() {}); // the $ is changed to jQuery on call a function
 
 to see how to select elements of HTML, see the class 06
+
+to change an attribute of a tag element on console, we need use like this:
+$('tag').attr('attribute','value');
+
+to get the attribute:
+$('tag').attr('attribute');
