@@ -74,3 +74,11 @@ to get or change a element inside a tag:
 $('tag:eq(index_number)'); OR $('tag').eq(index_number);
 like this:
 $('li:eq(0)'); OR $('li').eq(0);
+
+to select or change a tag parent of a target tag (not recommended):
+$('tag').parent();
+	this can be used to get the parent of the parent, like this:
+	$('.daughter').parent().parent(); // how many times you want
+
+to find a parent tag (like the 'find' to get a child) of the selected tag:
+$('tag').closest('tag');
