@@ -41,8 +41,14 @@ $('tag').html();
 to select an unique element of a tag with many tags inside it:
 $('tag').find('tag_inside_tag');
 
-to add a class in a element
+to consult a class in an element
+if($('tag').hasClass('classname')){};
+
+to add a class in an element
 $('tag').addClass('className');
+
+to remove a class in an element
+$('tag').removeClass('className')
 
 to change a content of a tag inside a tag with many tags:
 $('tag').find('tag_inside_tag').html('new content');
@@ -82,3 +88,12 @@ $('tag').parent();
 
 to find a parent tag (like the 'find' to get a child) of the selected tag:
 $('tag').closest('tag');
+
+to add or change a css custom in a tag:
+$('tag').css("property","value");
+
+to add or change many css custom in a tag:
+$('tag').css("property","value").css("another_property","another_value")...;
+
+to remove a css custom in a tag:
+$('tag').css("property","");
