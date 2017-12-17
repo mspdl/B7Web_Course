@@ -45,4 +45,20 @@ to add a class in a element
 $('tag').addClass('className');
 
 to change a content of a tag inside a tag with many tags:
-$('tag').find('tag_inside_tag').html('new content')
+$('tag').find('tag_inside_tag').html('new content');
+
+to change a content to a pure text content:
+$('tag').text('your text here');
+
+to change the width of an image, there is some ways:
+$('img').attr('width','200'); OR
+$('img').width(200); // the same to consulting the value or other attributes and tags
+
+to change tags withtout content (recommended to form tags, link an input):
+$('tag').val("Text");
+
+to add content in a tag:
+After: $('tag').after('content');
+Before: $('tag').before('content');
+Inside, but in the end: $('tag').append('conent');
+Inside, but in the begin: $('tag').prepend('conent');
