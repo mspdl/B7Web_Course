@@ -62,3 +62,15 @@ After: $('tag').after('content');
 Before: $('tag').before('content');
 Inside, but in the end: $('tag').append('conent');
 Inside, but in the begin: $('tag').prepend('conent');
+
+to create a variable and attribute a html value to it:
+var variable = $('tag');
+variable.any_above_function('any parameter above');
+
+to transfer javascript code to jQuery;
+$(document.getElementById('id'));
+
+to get or change a element inside a tag:
+$('tag:eq(index_number)'); OR $('tag').eq(index_number);
+like this:
+$('li:eq(0)'); OR $('li').eq(0);
