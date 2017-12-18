@@ -130,3 +130,7 @@ $.isFunction(variable) // to test if it's a function
 ------------------ Class 15 ------------------
 How do know if an element exists?
 $('tag').length > 0
+
+------------------ Class 16 ------------------
+How to know if an element has a class?
+$('tag').hasClass('class')
