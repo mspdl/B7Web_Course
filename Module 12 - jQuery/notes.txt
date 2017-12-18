@@ -98,7 +98,7 @@ $('tag').css("property","value").css("another_property","another_value")...;
 to remove a css custom in a tag:
 $('tag').css("property","");
 
-Class 13:
+------------------ Class 13 ------------------
 to save data in html property using jquery:
 $('tag').attr('data-variableName','variableValue');
 
@@ -109,3 +109,20 @@ $('tag');data('variableName');
 
 to get the size of a input text characters:
 $('input').val().lenght;
+
+------------------ Class 14 ------------------
+to clean the spaces before and after my text:
+$.trim('value') OR $.trim(variable);
+
+to repeat a command in jquery:
+$('tag'.each(function(){})); // something like:
+$('li'.each(function(){
+	alert($(this).html);
+}))
+
+to get the type of a variable:
+$.type(variable);
+
+to test if a variable is a specific type:
+$.isNumeric(variable) // to test if it's a number
+$.isFunction(variable) // to test if it's a function
