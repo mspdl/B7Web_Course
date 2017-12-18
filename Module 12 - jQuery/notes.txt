@@ -145,3 +145,10 @@ $('tag').removeAttr('disabled');
 ------------------ Class 18 ------------------
 How to catch selected item from SELECT?
 $('tag').val();
+
+------------------ Class 19 ------------------
+How to alter an element of a list?
+$('listTag').eq('indexNumber').html('newValues').css('property','value');
+for example:
+$('li').eq(2).html('Changed Item');
+$('li').eq(2).remove(); // to remove a item of the list
