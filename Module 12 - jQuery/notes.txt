@@ -141,3 +141,7 @@ $('tag').attr('disabled','disabled');
 
 How to activate an element of a form?
 $('tag').removeAttr('disabled');
+
+------------------ Class 18 ------------------
+How to catch selected item from SELECT?
+$('tag').val();
