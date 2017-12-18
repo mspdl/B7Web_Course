@@ -134,3 +134,10 @@ $('tag').length > 0
 ------------------ Class 16 ------------------
 How to know if an element has a class?
 $('tag').hasClass('class')
+
+------------------ Class 17 ------------------
+How to deactivate an element of a form?
+$('tag').attr('disabled','disabled');
+
+How to activate an element of a form?
+$('tag').removeAttr('disabled');
