@@ -126,3 +126,7 @@ $.type(variable);
 to test if a variable is a specific type:
 $.isNumeric(variable) // to test if it's a number
 $.isFunction(variable) // to test if it's a function
+
+------------------ Class 15 ------------------
+How do know if an element exists?
+$('tag').length > 0
