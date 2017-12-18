@@ -97,3 +97,15 @@ $('tag').css("property","value").css("another_property","another_value")...;
 
 to remove a css custom in a tag:
 $('tag').css("property","");
+
+Class 13:
+to save data in html property using jquery:
+$('tag').attr('data-variableName','variableValue');
+
+to save data in html using jquery:
+$('tag').data('variableName','variableValue');
+and get the data:
+$('tag');data('variableName');
+
+to get the size of a input text characters:
+$('input').val().lenght;
