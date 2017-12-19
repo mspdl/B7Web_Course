@@ -201,3 +201,22 @@ $('#btn1').trigger('click');
 To trigger another function from another tag:
 $('tag').trigger('anotherTag'); // SAMPLE:
 $('#btn2').trigger('click');
+
+------------------ Class 25 ------------------
+All anotations are in the class files
+
+------------------ Class 26 ------------------
+How to prevent a default action of an action:
+$('tag').on('action',function(e){e.preventDefault();}); // SAMPLE:
+$('#button').on('click',function(e){e.preventDefault();});
+
+How to know what type of event it's:
+$('tag').on('action',function(e){e.type;}); // SAMPLE:
+$('#button').on('click',function(e){e.type;});
+
+How to know what element of event it's:
+$('tag').on('action',function(e){e.target;}); // SAMPLE:
+$('#button').on('click',function(e){e.target;});
+CAN BE DONE WITH THIS WAY:
+$('tag').on('action',function(e){this;}); // SAMPLE:
+$('#button').on('click',function(e){this;});
