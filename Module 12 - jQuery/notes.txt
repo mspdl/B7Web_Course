@@ -161,3 +161,12 @@ $('li')[0]; $('li')[0].innerHTML("Something");
 ------------------ Class 21 ------------------
 What's an event?
 It's any moviment or action made in the page. Like move the mouse, load the page, click on a button, etc.
+
+------------------ Class 22 ------------------
+if ($(this).hasClass('redbackground')) {
+	$(this).removeClass('redbackground');
+} else {
+	$(this).addClass('redbackground');			
+}
+// THIS CODE CAN BE SUBSTITUTED FOR:
+$(this).toggleClass('redbackground');
