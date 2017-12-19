@@ -157,3 +157,7 @@ $('li').eq(2).remove(); // to remove a item of the list
 How to get a native element?
 $('tag')[indexNumber] //for example:
 $('li')[0]; $('li')[0].innerHTML("Something");
+
+------------------ Class 21 ------------------
+What's an event?
+It's any moviment or action made in the page. Like move the mouse, load the page, click on a button, etc.
