@@ -152,3 +152,8 @@ $('listTag').eq('indexNumber').html('newValues').css('property','value');
 for example:
 $('li').eq(2).html('Changed Item');
 $('li').eq(2).remove(); // to remove a item of the list
+
+------------------ Class 20 ------------------
+How to get a native element?
+$('tag')[indexNumber] //for example:
+$('li')[0]; $('li')[0].innerHTML("Something");
