@@ -170,3 +170,16 @@ if ($(this).hasClass('redbackground')) {
 }
 // THIS CODE CAN BE SUBSTITUTED FOR:
 $(this).toggleClass('redbackground');
+
+------------------ Class 23 ------------------
+$('#btn2').mouseover(function(){
+	$(this).addClass('redbackground');
+});
+
+$('#btn2').mouseout(function(){
+	$(this).removeClass('redbackground');
+});
+// THIS CODE CAN BE SUBSTITUTED FOR:
+$('#btn2').hover(function(){
+	$(this).toggleClass('redbackground');
+});
