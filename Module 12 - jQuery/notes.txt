@@ -220,3 +220,22 @@ $('#button').on('click',function(e){e.target;});
 CAN BE DONE WITH THIS WAY:
 $('tag').on('action',function(e){this;}); // SAMPLE:
 $('#button').on('click',function(e){this;});
+
+------------------ Class 27 ------------------
+Scroll function:
+$('tag').on('scroll', function(){});
+$('#div').on('scroll',function(){}); // OR
+
+$('tag').scroll(function(){});
+$('#div').scroll(function(){})); // OR
+
+$('tag').bind('scroll', function(){});
+$('#div').bind('scroll',function(){}); // OR
+
+Browser Window size function:
+$(window).on('resize');
+$(window).on('resize', function(){}); // OR with bind or directly calling a function
+
+Browser Window scroll function:
+$(window).on('scroll');
+$(window).on('scroll', function(){}); // OR with bind or directly calling a function
