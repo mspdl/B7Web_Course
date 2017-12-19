@@ -192,3 +192,12 @@ $('tag').bind('click',function(){}); // COMING INTO DESUSE
 How to remove events:
 $('#btn1').unbind('click'); // OR
 $('#btn1').off('click');
+
+------------------ Class 24 ------------------
+False triggering events:
+$('tag').trigger('action'); // SAMPLE:
+$('#btn1').trigger('click');
+
+To trigger another function from another tag:
+$('tag').trigger('anotherTag'); // SAMPLE:
+$('#btn2').trigger('click');
