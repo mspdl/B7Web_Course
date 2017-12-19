@@ -183,3 +183,12 @@ $('#btn2').mouseout(function(){
 $('#btn2').hover(function(){
 	$(this).toggleClass('redbackground');
 });
+
+------------------ Class 24 ------------------
+Another ways to add an event:
+$('tag').on('click',function(){});
+$('tag').bind('click',function(){}); // COMING INTO DESUSE
+
+How to remove events:
+$('#btn1').unbind('click'); // OR
+$('#btn1').off('click');
