@@ -240,5 +240,8 @@ Browser Window scroll function:
 $(window).on('scroll');
 $(window).on('scroll', function(){}); // OR with bind or directly calling a function
 
------------------- Class 27 ------------------
+------------------ Class 28 ------------------
 Form Events - All anotations in the script.js of the class 28
+
+------------------ Class 29 ------------------
+Form Events - All anotations in the script.js of the class 29
