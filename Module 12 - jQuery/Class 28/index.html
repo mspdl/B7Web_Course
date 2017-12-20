@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Class 28 - Form Events</title>
+		<style type="text/css">
+			.redbackground{
+				background-color: red;
+			}
+			.focused {
+				background-color: #999;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<form method="POST" id="form">
+			Name: <br>
+			<input type="text" name="name" id="name"><br><br>
+
+			E-mail: <br>
+			<input type="email" name="email" id="email"><br><br>
+
+			Age: <br>
+			<select name="age" id="age">
+				<option>10 years old</option>
+				<option>20 years old</option>
+				<option>30 years old</option>
+			</select><br><br>
+
+			<input type="submit" value="Send">
+
+		</form>			
+			
+		<script type="text/javascript" src="../jquery/jquery-3.2.1.min.js"></script>	
+		<script type="text/javascript" src="script.js"></script>	
+	</body>
+</html>
