@@ -8,4 +8,4 @@ $(function(){
 		alert('Clicked on button 2');
 	});
 
-});
+}); 
