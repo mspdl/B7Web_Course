@@ -12,4 +12,4 @@ $(function(){
 		$(this).toggleClass('redbackground');
 	});
 
-});
+}); 
