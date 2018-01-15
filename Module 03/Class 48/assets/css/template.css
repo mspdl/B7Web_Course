@@ -115,3 +115,20 @@ nav a:hover {
 	font-size: 14px;
 	text-decoration: none;
 }
+.banner_schedule {
+	padding-top: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-size: 13px;	
+}
+.banner_schedule1,
+.banner_schedule2,
+.banner_schedule3 {
+	margin: 8px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
+}
