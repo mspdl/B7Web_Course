@@ -144,7 +144,7 @@ nav a:hover {
 }
 .widget_title {
 	margin-top: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 }
 .widget_title_text {
 	color: #000000;
@@ -157,4 +157,35 @@ nav a:hover {
 	border-radius: 1px;
 	background-color: #36A9E1;
 	margin-top: 8px;
+}
+.departments {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.department1,
+.department2,
+.department3,
+.department4,
+.department5,
+.department6 {
+	height: 100px;
+	width: 100px;
+	background-color: #39AAE1;
+	margin: 10px;
+	border-radius: 10px;
+}
+.makeaa {
+	display: flex;
+	flex-direction: column;
+}
+.makeaa div {
+	margin-bottom: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	padding-top: 5px;
+	padding-bottom: 5px; 
+}
+.makeaa_body {
+	padding-top: 10px;
+	padding-bottom: 10px; 
 }
