@@ -243,6 +243,7 @@ article .news_resume {
 	color: #5C5C5C;
 	line-height: 20px;
 }
+
 footer {
 	display: flex;
 	justify-content: center;
@@ -250,7 +251,6 @@ footer {
 }
 .footer_menu {
 	display: flex;
-	flex: 1;
 }
 .fm1, 
 .fm2, 
@@ -267,6 +267,14 @@ footer {
 }
 .fm3 {
 	background-color: #2B4C99;
+}
+.footer_menu .fm_title{
+	font-size: 20px;
+	padding: 5px;
+}
+.footer_menu .fm_desc {
+	font-size: 13px;
+	padding: 5px;
 }
 .footer_area {
 	display: flex;
