@@ -295,3 +295,27 @@ footer .widget_title_text {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
+.medicenter_clinic {
+	font-size: 13px;
+	color: #6E6D6E;
+	flex-direction: column;
+}
+.medicenter_clinic div {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.medicenter_clinic a {
+	color: #DADBDC;
+}
+.mc_contact {
+	display: flex;
+	justify-content: space-between;
+}
+.mc_contact div {
+	flex: 1;
+}
+.social_networks img {
+	width: 50px;
+	height: 50px;
+	padding-right: 5px;
+}
