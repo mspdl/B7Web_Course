@@ -256,8 +256,6 @@ footer {
 .fm2, 
 .fm3 {
 	flex: 1;
-	color: #FFFFFF;
-	padding: 20px;
 }
 .fm1 {
 	background-color: #39AAE1;
@@ -285,6 +283,12 @@ footer {
 }
 footer .widget_title_text {
 	color: #FFFFFF;
+}
+.footer_menu a {
+	display: block;
+	text-decoration: none;
+	color: #FFFFFF;
+	padding: 20px;
 }
 .footer_copy {
 	border-top: 1px solid #2C2C2C;
@@ -318,4 +322,30 @@ footer .widget_title_text {
 	width: 50px;
 	height: 50px;
 	padding-right: 5px;
+}
+
+.latest_post {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.latest_post_title {
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+.latest_post_date {
+	font-size: 11px;
+	color: #39AAE1;
+}
+.latest_tweet {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.latest_tweet_title {
+	padding-bottom: 5px;
+	font-size: 13px;
+	color: #6E6D6E;
+}
+.latest_tweet_date {
+	font-size: 11px;
+	color: #39AAE1;
 }
