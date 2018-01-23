@@ -1,0 +1,25 @@
+Class 03 - Configuring the Git
+
+On windows (system that I'm using), open the Git CMD, and type:
+	to change the user name of your Git
+		git config --global user.name "Morgan Espindola"
+		nothing gonna happen, it's a internal configuration
+
+	to change the user email of your Git
+		git config --global user.email "morgan.espindola@gmail.com"
+		nothing gonna happen, it's a internal configuration
+
+	to change the IDE of your Git
+		git config --global core.editor sub
+		sub if for sublime, and again: nothing gonna happen, it's a internal configuration
+
+	to get informations about the configuration of your Git:
+		username:
+			git config user.name
+		email:
+			git config user.email
+		IDE in use:
+			git config core.editor
+		every information:
+			git config --list
+	each command will return the info requested.
