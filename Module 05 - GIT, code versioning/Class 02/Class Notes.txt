@@ -1,0 +1,12 @@
+Class 02 - Installing the git.
+
+There are two sites involving git: github and gitbucket.
+
+Git is only the place where you find your repositories.
+
+Official site of git: https://git-scm.com/
+
+After access the site, clicking on downloads, you choose your system and get the file.
+
+To check if the git is installed in your system, go to console and type:
+	git --version
