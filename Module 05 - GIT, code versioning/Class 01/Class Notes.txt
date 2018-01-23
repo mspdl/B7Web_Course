@@ -2,5 +2,7 @@ What is it, what is it, how does it work?
 
 It was raised because of some problems:
 1 - the programmer could not return changes to his files/codes (to have a historical of changes in the code and easily find problems when the software stop to work and have a backup when a big bug appear.)
-
 2 - incompatibility between projects involving the same code and multiple programmers at the same time
+
+versioning
+The most known software for versioning is git.
