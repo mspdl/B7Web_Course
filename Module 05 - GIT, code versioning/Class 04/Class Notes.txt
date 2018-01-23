@@ -1,0 +1,8 @@
+Class 04 - Starting a repository
+
+Open Git CMD again (remembering that I'm using windows), and type:
+	cd <way to access your projects>, something like:
+	cd c:/users/morgan/git/myproject
+
+	after accessing the project folder, type to start the repository:
+		git init
