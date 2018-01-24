@@ -1,0 +1,7 @@
+Class 06 - Reversing Modifications
+
+To know which branch you are in:
+	git branch
+	whose have the '*' is the chosen one
+
+	
