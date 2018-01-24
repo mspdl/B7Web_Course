@@ -1,0 +1,12 @@
+Class 07 - Working with different branches
+
+To create a new branch, type in the command screen:
+	git branch <new branch>
+
+To see all branches:
+	git branch
+
+	You're using the branch with '*'
+
+How to switch branch? Type:
+	git checkout <branch that you want>
