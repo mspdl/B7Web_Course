@@ -1,0 +1,12 @@
+Class 08 - Difference between files
+
+To see the changes in the files, before commit:
+	git diff
+
+To see only the name of the files changed, before commit:
+	git diff --name-only
+
+To revert changes that you don't want to commit:
+	git checkout HEAD (this is the actual branch) -- <filename>
+	example:
+		git checkout HEAD style.css
