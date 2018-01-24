@@ -4,4 +4,14 @@ To know which branch you are in:
 	git branch
 	whose have the '*' is the chosen one
 
-	
+To prepare and commit at the same time:
+	git commit -am "<commentary line>"
+
+To reversing a commit:
+	type: git log 
+	get the bash code of the commit that you want to back
+	type: git reset --<type of reset (the three above)> <bash code (you can use only the first 7 digits of the bash code)>
+	like that: git reset --hard 9a5d580f131a5e865cb25a46fdd47a8b53382d82
+		soft: go back to the selected commit and the modifications prepared, a state before the commit selected
+		mixed: go back to the selected commit and the modification are not prepared, you'll need to prepare files again
+		hard: go back to the selected commit and will erase everything after that
