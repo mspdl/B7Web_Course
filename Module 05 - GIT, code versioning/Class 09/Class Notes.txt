@@ -1,0 +1,9 @@
+Class 09 - Creating a directory on Github
+
+Repositories on gi are only local. To send your respositories to the cloud, you'll need another service, like github or gitbucket.
+
+On this course, we'll use github, so we need to acess the site:
+	https://github.com/
+	Sign in
+	Create a new repository (https://github.com/new)
+	Add the Repository name and the respository description
