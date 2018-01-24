@@ -1,0 +1,32 @@
+Class 05 - Branch, README and Commit
+
+Branches:
+	'master' is the main branch of your project, always you start a new project on Git
+	you can create a different version of the main project, literraly a 'branch' of your project, a version where one or more paralel version are created.
+
+Commit:
+	saving and sending your modifications to Git
+	commits have a commentary section, it's very important to comment what modifications were made. For, it maybe needed in the future and it's good to avoid confunsion.
+
+README:
+	It's the presentation file of each project on git. Sometimes it's have descriptions, comments, details and other information about the project. Normally it's called README.md, but you can created README.txt (it'll work, but is not too much used)
+
+To scan and see what was modified or created on project:
+	git status
+
+	untracked files: are files that the git saw not yet, in other words, never was committed or prepared for.
+	to prepare files to commit the files to git, you can do it in two ways:
+	sending file by file:
+		git add <filename>
+	sending all files:
+		git add -A
+
+		after running both commands, nothing goona happen, but you can type git status and see that the files are ready to commit now
+
+To finally commit a project, type:
+	git commit -m "commentary title"
+
+To see all commits made in the branch
+	git log
+
+While I'm not do commit, my files will keep only in my machine.
