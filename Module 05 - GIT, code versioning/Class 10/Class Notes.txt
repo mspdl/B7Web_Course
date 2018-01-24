@@ -1,0 +1,31 @@
+Class 10 - Connecting local repository to the remote repository
+
+Configuring the acess between github and the local computer
+	With the repository created on github, you'll need to get a key on your computer.
+	on windows, it's necessary to download git bash (http://gitforwindows.org/)
+	open git bash and type:
+	ssh-keygen -t rsa -b 4096 -C "<your email>"
+	then, it'll ask you the name of the file to save the key 
+	Just Press Enter
+	then, it'll ask the password 
+	Just Press Enter
+	then, it'll ask the password again
+	Just Press Enter
+	Now you access the folder: C:/Users/<youruser>/.ssh/ (can accessed by using win+R)
+	open the file id_rsa.pub and copy the entire content
+	go back to your github profile page, click on your profile and select 'Settings'
+	Now click in "SSH and GPG keys" on the left menu
+	Now click in "New SSH keys", put a title and paste the code, copied in the id_rsa.pub file
+
+Sending files to the github:
+	https://github.com/<your profile link>/<your module>
+	open the Git CMD and type:
+		git remote add <destiny> https://github.com/<your profile link>/<your module>.git
+		you can see more details typing git remote -v or just git remote to see what're sending
+		git <function> -u <destiny> <branch>
+		<function> can be:
+			push: to push files to the remote server
+			fetch: to download files from the remote server
+		it'll ask your email and password of github, fill it and log into the github
+
+	Now if you refresh your module page on github, you'll see your files, files that was only on your local computer
