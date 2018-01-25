@@ -1,0 +1,4 @@
+Class 11 - Making changes in remote repository
+
+git commit does not apply for remote repository, only local, and doesn't include the new files. Before the command 'git commit', you need to apply 'git add -A' and after commit you need type:
+	git push <destiny> <branch>
