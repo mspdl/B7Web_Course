@@ -1,0 +1,10 @@
+Class 12 - Ignoring files in the repository (gitignore)
+
+First you need to create a file inside your project called '.gitignore'
+Inside the file '.gitignore', type the file or folder you want to ignore, in each line, like this:
+	passwords.txt
+	secret_folder/*
+	db_backup.sql
+	*.txt
+
+Now when you press 'git status' the files in the '.gitignore' file will be ignored by the git.
