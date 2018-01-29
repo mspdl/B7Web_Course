@@ -17,7 +17,19 @@
 				$phone = addslashes($_POST['phone']);
 
 				if (!empty($name) && !empty($email) && !empty($password)) {
-					$u->register($name, $email, $password, $phone);
+					if($u->register($name, $email, $password, $phone)) { 
+						?>
+						<div class="alert alert-success">
+							<strong>Congratulations!</strong> User registered successfully! <a href="login.php">Login now.</a>
+						</div>
+						<?php
+					} else {
+						?>
+						<div class="alert alert-warning">
+							User already registered. <a href="login.php">Login now.</a>
+						</div>
+						<?php
+					}
 				} else {
 					?>
 					<div class="alert alert-warning">
