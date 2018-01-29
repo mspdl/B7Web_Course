@@ -20,11 +20,18 @@ CREATE TABLE `categories` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8
 
 
-users	CREATE TABLE `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(32) NOT NULL,
   `phone` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8	
+
+CREATE TABLE `adverts_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_advert` int(11) NOT NULL,
+  `url` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8	
