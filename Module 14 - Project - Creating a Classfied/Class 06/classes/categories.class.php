@@ -13,7 +13,6 @@ class Categories {
 		}
 
 		return $array;
-		
 	}
 
 
