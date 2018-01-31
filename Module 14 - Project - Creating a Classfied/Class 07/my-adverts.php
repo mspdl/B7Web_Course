@@ -29,10 +29,18 @@ if(empty($_SESSION['cLogin'])){
 				$adverts = $a->getMyAdverts();
 				foreach ($adverts as $advert): ?>
 				<tr>
-					<td><img src="assets/img/adverts/<?php echo $advert['url']; ?>" border="0"></td>
+					<td>
+						<?php if(!empty($advert['url'])) : ?>
+						<img src="assets/img/adverts/<?php echo $advert['url']; ?>" border="0" height='50'></td>
+					<?php else : ?>
+						<img src="assets/img/default.png" height='50' border="0"></td>
+					<?php endif; ?>
 					<td><?php echo $advert['title']; ?></td>
 					<td><?php echo number_format($advert['value'], 2); ?></td>
-					<td></td>
+					<td>
+						<a href="edit-advert.php?id=<?php echo $advert['id'] ?>" class='btn btn-default'>Edit</a>
+						<a href="delete-advert.php?id=<?php echo $advert['id'] ?>" class='btn btn-danger'>Delete</a>
+					</td>
 				</tr>
 				<?php endforeach; ?>
 			</table>
