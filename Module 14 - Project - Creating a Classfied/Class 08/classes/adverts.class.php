@@ -54,40 +54,47 @@ class Adverts {
 
 	public function editAdvert($title, $category, $value, $description, $status, $photos, $id) {
 		global $pdo;
+		echo "entrou no editAdvert<br>";
 
 		$sql = $pdo->prepare("UPDATE adverts SET title = ?, id_category = ?, id_user = ?, description = ?, value = ?, status = ? WHERE id = ?");
 		$sql->execute(array($title, $category, $_SESSION['cLogin'], $description, $value, $status, $id));
 
 		if(count($photos) > 0) {
-			for($i=0;$i=count($photos['tmp_name']);$i++) {
+			echo count($photos['error'])."<br>";
+			print_r($photos['error']);
+			echo "<br>há fotos<br>";
+			for($i=0;$i<count($photos['tmp_name']);$i++) {
 				$type = $photos['type'][$i];
 				if(in_array($type, array('image/jpeg', 'image/png'))) {
+
 					// Renaming the sent files
 					$tmpname = md5(time().rand(0,9999)).'.jpg';
-					move_uploaded_file($photos['tmpname'][$i], 'assets/img/adverts/'.$tmpname);
+					move_uploaded_file($photos['tmp_name'][$i], 'assets/img/adverts/'.$tmpname);
+
 					// readjusting the size of the images sent
 					list($width_orig, $height_orig) = getimagesize('assets/img/adverts/'.$tmpname);
 					$ratio = $width_orig/$height_orig;
 					$width = 500;
 					$height = 500;
-					if (($width/$height) > $ratio) {
+					if ($width/$height > $ratio) {
 						$width = $height*$ratio;
 					} else {
 						$height = $width/$ratio;
 					}
 
 					// creating the new image
-					$img = imagecreatetruecolor($widht, $height);
-					if($type = 'image/jpeg') {
+					$img = imagecreatetruecolor($width, $height);
+					if($type == 'image/jpeg') {
 						$orig = imagecreatefromjpeg('assets/img/adverts/'.$tmpname);
-					} elseif ($type = 'image/png') {
+					} elseif ($type == 'image/png') {
 						$orig = imagecreatefrompng('assets/img/adverts/'.$tmpname);
 					}
 					imagecopyresampled($img, $orig, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
 					imagejpeg($img, 'assets/img/adverts/'.$tmpname, 80);
 
-					$sql = $pdo->prepare("INSERT INTO adverts_images SET id_advert = ? , url = ?");
+					$sql = $pdo->prepare("INSERT INTO adverts_images (id_advert, url) VALUES (?, ?)");
 					$sql->execute(array($id, $tmpname));
+
 				}
 			}
 		}

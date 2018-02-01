@@ -8,16 +8,10 @@ if(empty($_SESSION['cLogin'])){
 	<?php
 	exit;
 }
-
 require 'classes/adverts.class.php';
 $a = new Adverts();
-if (
-	(isset($_POST['title']) && !empty($_POST['title'])) ||
-	(isset($_POST['category']) && !empty($_POST['category'])) ||
-	(isset($_POST['value']) && !empty($_POST['value'])) ||
-	(isset($_POST['description']) && !empty($_POST['description'])) ||
-	(isset($_POST['status']) && !empty($_POST['status']))
-) {
+if (isset($_POST['title']) && !empty($_POST['title'])) {
+	echo "entrou na condicao de preenchimento<br>";
 	$title = addslashes($_POST['title']);
 	$category = addslashes($_POST['category']);
 	$value = addslashes($_POST['value']);
@@ -29,7 +23,6 @@ if (
 		$photos = array();
 	}
 	
-
 	$a->editAdvert($title, $category, $value, $description, $status, $photos, $_GET['id']);
 	?>
 	<div class="alert alert-success">Advert edited successfully!</div>
@@ -95,11 +88,11 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
 				<div class="form-group">
 					<label for="add_photo">Add more adverts' photos</label>
 					<input type="file" name="photos[]" multiple>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-heading">Adverts' Photos</div>
-					<div class="panel-body"></div>
+					<br>
+					<div class="panel panel-default">
+						<div class="panel-heading">Adverts' Photos</div>
+						<div class="panel-body"></div>
+					</div>
 				</div>
 
 				<input type="submit" value="save" class="btn btn-default">
