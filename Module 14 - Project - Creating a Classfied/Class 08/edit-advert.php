@@ -11,7 +11,6 @@ if(empty($_SESSION['cLogin'])){
 require 'classes/adverts.class.php';
 $a = new Adverts();
 if (isset($_POST['title']) && !empty($_POST['title'])) {
-	echo "entrou na condicao de preenchimento<br>";
 	$title = addslashes($_POST['title']);
 	$category = addslashes($_POST['category']);
 	$value = addslashes($_POST['value']);
@@ -91,7 +90,14 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
 					<br>
 					<div class="panel panel-default">
 						<div class="panel-heading">Adverts' Photos</div>
-						<div class="panel-body"></div>
+						<div class="panel-body">
+							<?php foreach ($info['photos'] as $photo) : ?>
+							<div class="photo_item">
+								<img src="assets/img/adverts/<?php echo $photo['url']; ?>" class='img-thumbnail' border="0"><br>
+								<a href="delete-photo.php?id=<?php echo $photo['id']; ?>" class="btn btn-default">Delete image</a>
+							</div>
+							<?php endforeach; ?>
+						</div>
 					</div>
 				</div>
 

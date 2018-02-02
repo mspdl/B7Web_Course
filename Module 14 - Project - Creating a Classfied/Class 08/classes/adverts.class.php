@@ -45,7 +45,17 @@ class Adverts {
 		$sql->execute(array($id));
 
 		if($sql->rowCount() > 0) {
+
 			$array = $sql->fetch();
+			$array['photos'] = array();
+
+			$sql = $pdo->prepare("SELECT id,url FROM adverts_images WHERE id_advert = ?");
+			$sql->execute(array($id));
+
+			if($sql->rowCount() > 0) {
+				$array['photos'] = $sql->fetchAll();
+			} 
+
 		}
 
 		return $array;
@@ -54,15 +64,11 @@ class Adverts {
 
 	public function editAdvert($title, $category, $value, $description, $status, $photos, $id) {
 		global $pdo;
-		echo "entrou no editAdvert<br>";
 
 		$sql = $pdo->prepare("UPDATE adverts SET title = ?, id_category = ?, id_user = ?, description = ?, value = ?, status = ? WHERE id = ?");
 		$sql->execute(array($title, $category, $_SESSION['cLogin'], $description, $value, $status, $id));
 
 		if(count($photos) > 0) {
-			echo count($photos['error'])."<br>";
-			print_r($photos['error']);
-			echo "<br>há fotos<br>";
 			for($i=0;$i<count($photos['tmp_name']);$i++) {
 				$type = $photos['type'][$i];
 				if(in_array($type, array('image/jpeg', 'image/png'))) {
@@ -98,6 +104,24 @@ class Adverts {
 				}
 			}
 		}
+	}
+
+	public function deletePhoto($id) {
+		global $pdo;
+		$id_advert = 0;
+
+		$sql = $pdo->prepare("SELECT id_advert FROM adverts_images WHERE id = ?");
+		$sql->execute(array($id));
+
+		if($sql->rowCount() > 0) {
+			$row = $sql->fetch();
+			$id_advert = $row['id_advert'];
+		}
+
+		$sql = $pdo->prepare("DELETE FROM adverts_images WHERE id = ?");
+		$sql->execute(array($id));
+
+		return $id_advert;
 	}
 
 
