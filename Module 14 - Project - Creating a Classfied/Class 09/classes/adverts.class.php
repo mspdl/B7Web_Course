@@ -15,10 +15,14 @@ class Adverts {
 
 	public function getLastAdverts($page, $perPage) {
 		global $pdo;
-		$offset = ($page-1) * $perPage;
+		$offset = ($page - 1) * 2;
 
 		$array = array();
-		$sql = $pdo->prepare("SELECT *, (SELECT adverts_images.url FROM adverts_images WHERE adverts_images.id_advert = adverts.id LIMIT 1) as url, (SELECT categories.name FROM categories WHERE categories.id = adverts.id_category) as category FROM adverts ORDER BY id DESC LIMIT $offset, $perPage");
+		$sql = $pdo->prepare("SELECT
+		*,
+		(SELECT adverts_images.url FROM adverts_images WHERE adverts_images.id_advert = adverts.id LIMIT 1) as url,
+		(SELECT categories.name FROM categories WHERE categories.id = adverts.id_category) as category
+		FROM adverts ORDER BY id DESC LIMIT $offset, $perPage");
 		$sql->execute();
 
 		if($sql->rowCount() > 0) {

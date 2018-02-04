@@ -5,14 +5,15 @@ require 'classes/users.class.php';
 $a = new Adverts();
 $u = new Users();
 
+$total_adverts = $a->getTotalAdverts();
+$total_users = $u->getTotalUsers();
+
 $p = 1;
-if(isset($_GET['p']) && !empty($_GET['$p'])) {
-	$p = addslashes($_GET['$p']);
+if(isset($_GET['p']) && !empty($_GET['p'])) {
+	$p = addslashes($_GET['p']);
 }
 
 $perPage = 2;
-$total_adverts = $a->getTotalAdverts();
-$total_users = $u->getTotalUsers();
 $total_pages = ceil($total_adverts/$perPage);
 
 $adverts = $a->getLastAdverts($p, $perPage);
@@ -45,14 +46,16 @@ $adverts = $a->getLastAdverts($p, $perPage);
 										<a href="product.php?id=<?php echo $advert['id']; ?>"><?php echo $advert['title']; ?></a><br>
 										<?php echo $advert['category']; ?>
 									</td>
-									<td><?php echo number_format($advert['value'], 2); ?></td>
+									<td>
+										$ <?php echo number_format($advert['value'], 2); ?>
+									</td>
 								</tr>
 							<?php endforeach; ?>
 						</tbody>
 					</table>
 					<ul class="pagination">
-						<?php for($i=0;$i<=$total_pages;$i++) : ?>
-							<li><a href="index.php?p=?<?php echo $i; ?>"><?php echo $i; ?></a></li>
+						<?php for($i=1;$i<=$total_pages;$i++) : ?>
+							<li class="<?php echo ($p==$i)?'active':'' ?>"><a href="index.php?p=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 						<?php endfor; ?>
 					</ul>
 				</div>
