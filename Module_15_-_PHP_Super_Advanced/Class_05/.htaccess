@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /B7Web_Course/Module_15_-_PHP_Super_Advanced/Class_05/index.php?url=$1 [QSA,L]
