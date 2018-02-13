@@ -11,8 +11,8 @@ class Core {
 
 		if(!empty($url) && $url != '/') {
 			$url = explode('/', $url);
-
 			array_shift($url); // remove the first element of the array, in this case: the blank value of the first bar
+
 			$currentController = $url[0].'Controller';
 			array_shift($url);
 
@@ -22,12 +22,13 @@ class Core {
 				$currentAction = 'index';
 			}
 
-			print_r($url);echo "<hr>";
 		} else {
 			$currentController = 'homeController';
 			$currentAction = 'index';
 		}
 
+		print_r($url);echo "<hr>";
+		
 		echo "CONTROLLER: ".$currentController."<br>";
 		echo "ACTION: ".$currentAction."<br>";
 
